@@ -1,1 +1,4 @@
 /nbproject/private/
+sites/default/files/js/*
+sites/default/files/css/*
+sites/default/files/php/*
