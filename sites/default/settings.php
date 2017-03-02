@@ -285,7 +285,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'Bw8c_kJYuBESoc5fLIdCEuy0NkwASAG8_jmQ8ku3iGkwY4J-E50HsEUCVT7qe9ZZqROqBQbqOg';
+$settings['hash_salt'] = 'Yb_t7Ee4BW4-e0KFD65vXeEcAsAaJUBg4eDGfuTHZ7ZtnUAG9Avcn44IovNbOmG_2H00icDh-Q';
 
 /**
  * Deployment identifier.
@@ -702,7 +702,7 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  * @code
  * $settings['trusted_host_patterns'] = array(
  *   '^www\.example\.com$',
- *);
+ * );
  * @endcode
  * will allow the site to only run from www.example.com.
  *
@@ -738,9 +738,7 @@ $settings['file_scan_ignore_directories'] = [
   'node_modules',
   'bower_components',
 ];
-  $settings['trusted_host_patterns'] = array(
-    '^drupal8.qml.com$',
- );
+
 /**
  * Load local development override configuration, if available.
  *
@@ -757,7 +755,7 @@ $settings['file_scan_ignore_directories'] = [
 # }
 $databases['default']['default'] = array (
   'database' => 'drupal8',
-  'username' => 'admin',
+  'username' => 'dmin',
   'password' => 'admin',
   'prefix' => '',
   'host' => 'localhost',
@@ -766,4 +764,4 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );
 $settings['install_profile'] = 'standard';
-$config_directories['sync'] = 'sites/default/files/config_asvfurc2q28cKsvyW9156YdrRNoEvAc7EggLsrpnMD8e5rBHxE_eFNABd4MkFVFiQSv5S3FBmg/sync';
+$config_directories['sync'] = 'sites/default/files/config_QvYYYqwGRqHdixKMYrL4-_XtcYlplpSQNam7JzJUMNTgT0xwP6-5JMzFP2gCJ1jb4feWnJkPtg/sync';
