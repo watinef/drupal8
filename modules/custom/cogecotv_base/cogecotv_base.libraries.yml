@@ -1,0 +1,7 @@
+cogecotv.socialmedia:
+  css:
+    theme:
+      css/social.media.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

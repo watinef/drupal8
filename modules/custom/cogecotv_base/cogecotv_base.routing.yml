@@ -1,0 +1,50 @@
+cogecotv_base.home_page:
+  path: '/home'
+  defaults:
+    _controller: '\Drupal\cogecotv_base\Controller\CogecoTvBaseController::home_page'
+  requirements:
+    _permission: 'access content'
+cogecotv_base.community_selection_page:
+  path: '/community-selection'
+  defaults:
+    _controller: '\Drupal\cogecotv_base\Controller\CogecoTvBaseController::community_selection_page'
+    _title: 'Choose your community'
+  requirements:
+    _permission: 'access content'
+cogecotv_base.community_home_page:
+  path: '/community/{community}'
+  defaults:
+    _controller: '\Drupal\cogecotv_base\Controller\CogecoTvBaseController::community_home_page'
+    _title: 'Welcome to CogecoTV'
+  requirements:
+    _permission: 'access content'
+cogecotv_base.community_subpage:
+  path: '/community/{community}/{page}'
+  defaults:
+    _controller: '\Drupal\cogecotv_base\Controller\CogecoTvBaseController::community_subpage'
+    _title: 'Welcome to CogecoTV'
+  requirements:
+    _permission: 'access content'
+cogecotv_base.error_404:
+  path: '/error-404'
+  defaults:
+    _controller: '\Drupal\cogecotv_base\Controller\CogecoTvBaseController::error_404'
+    _title: 'Choose your community'
+  requirements:
+    _permission: 'access content'
+cogecotv_base.terms_page_en:
+  path: '/terms-and-conditions'
+  defaults:
+    _controller: '\Drupal\cogecotv_base\Controller\CogecoTvBaseController::static_page'
+    _title: 'Terms and conditions'
+    page_name: 'terms'
+  requirements:
+    _permission: 'access content'
+cogecotv_base.terms_page_fr:
+  path: '/termes-et-conditions'
+  defaults:
+    _controller: '\Drupal\cogecotv_base\Controller\CogecoTvBaseController::static_page'
+    _title: 'Termes et conditions'
+    page_name: 'terms'
+  requirements:
+    _permission: 'access content'

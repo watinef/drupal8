@@ -1,0 +1,5 @@
+<ul class="nav">
+    {% for quicklink in quicklinks %}
+        <li><a href="{{ quicklink.url }}">{{ quicklink.title }}</a></li>
+    {% endfor %}
+</ul>

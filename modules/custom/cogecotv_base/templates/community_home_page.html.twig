@@ -1,0 +1,21 @@
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="headline">
+            {{ drupal_view('headlines', 'embed_1', community.field_machine_name.0.value) }}
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="cta-promotion">
+            {{ drupal_view('call_to_action_promotion', 'embed_1', community.field_machine_name.0.value) }}
+        </div>
+    </div>
+
+</div>
+
+    <div class="row">
+    <div class="videos">
+        {{ drupal_view('home_videos', 'embed_1', community.field_machine_name.0.value) }}
+    </div>
+</div>

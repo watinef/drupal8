@@ -1,0 +1,17 @@
+<h1>
+{%  trans %}
+    Choose your community.
+{%  endtrans %}
+</h1>
+{% for community in communities %}
+    <div style="float: left; margin:10px; width: 45%;">
+    <h1>{{ community.name }}</h1>
+    {% for key, community_child in community.children %}
+        <h2>
+            <a href="{{ url('cogecotv_base.community_home_page',{'community': community_child.machine_name} ) }}">
+                {{ community_child.name }}
+            </a>
+        </h2>
+    {% endfor %}
+    </div>
+{% endfor %}

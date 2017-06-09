@@ -1,0 +1,6 @@
+name: CogecoTV fixtures
+description: Test data for CogecoTV
+type: module
+core: 8.x
+dependencies:
+package: CogecoTV

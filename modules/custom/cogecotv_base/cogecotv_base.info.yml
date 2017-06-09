@@ -1,0 +1,6 @@
+name: CogecoTV base
+description: Base module from CogecoTV
+type: module
+core: 8.x
+dependencies:
+package: CogecoTV

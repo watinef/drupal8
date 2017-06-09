@@ -1,0 +1,16 @@
+services:
+  # Defines a Cogecotv service.
+  cogecotv_base.cogecotv:
+    class: Drupal\cogecotv_base\Cogecotv
+    arguments: ['@session_manager','@user.private_tempstore']
+
+  cogecotv_base_event_subscriber:
+    class: '\Drupal\cogecotv_base\EventSubscriber\EventSubscriber'
+    tags:
+      - { name: 'event_subscriber' }
+  # Simple cache contexts, directly derived from the request context.
+  cache_context.current_community:
+    class: Drupal\cogecotv_base\Cache\Context\CurrentCommunityCacheContext
+    arguments: ['@cogecotv_base.cogecotv']
+    tags:
+      - { name: cache.context }
