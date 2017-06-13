@@ -1,25 +1,30 @@
 <?php
 namespace Drupal\cogecotv_base\Plugin\Block;
+use Drupal\cogecotv_base\CogecoTvNavigation;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Drupal\cogecotv_base\Cogecotv;
+use Drupal\cogecotv_base\CogecotvSession;
 use Drupal\Core\Block\BlockBase;
 
 abstract class CogecoTvBlock extends BlockBase implements ContainerFactoryPluginInterface {
-  protected $cogecotv;
+  protected $session;
+  protected $navigation;
 
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, Cogecotv $cogecotv) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, CogecotvSession $session, CogecoTvNavigation $navigation) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
-    $this->cogecotv = $cogecotv;
+    $this->session = $session;
+    $this->navigation = $navigation;
   }
 
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
-    $cogecotv = \Drupal::service('cogecotv_base.cogecotv');
+    $session = \Drupal::service('cogecotv_base.session');
+    $navigation = \Drupal::service('cogecotv_base.navigation');
     return new static(
       $configuration,
-        $plugin_id,
-        $plugin_definition,
-      $cogecotv
+      $plugin_id,
+      $plugin_definition,
+      $session,
+      $navigation
     );
   }
 }

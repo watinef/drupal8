@@ -44,6 +44,19 @@ function cogecotv_fixtures_drush_command() {
     ];
 
 
+  $commands['create-users'] = [
+      'description' => 'Create a user for each role in CogecoTV.',
+      'aliases' => ['cgtv-cu'],
+      'arguments' => [
+      ],
+      'options' => [
+      ],
+      'examples' => [
+          'drush cgtv-cu' => 'Create a user for each role.',
+      ],
+  ];
+
+
 
   return $commands;
 }
@@ -159,30 +172,78 @@ function drush_cogecotv_fixtures_fix_communities() {
  * drush_[MODULE_NAME]_[COMMAND_NAME]().
  */
 function drush_cogecotv_fixtures_create_basic_nodes() {
+  $path_manager = \Drupal::service('path.alias_manager');
+
+  if($path_manager->getPathByAlias('/help') && $path_manager->getPathByAlias('/help')) {
+    drush_print(dt("Node already exists"));
+  }
+  else {
+    //Creating FAQ node
+    $node = Node::create([
+      'type'             => 'page',
+      'title'            => 'Frequently Asked Questions',
+      'body'             => 'insert your content here!',
+      'langcode'         => 'en',
+      'format'           => 'basic_html',
+      'moderation_state' => 'published',
+      'uid'              => 1,
+    ]);
+    $node->save();
+
+    //Translating FAQ node
+    $node_fr = $node->addTranslation('fr');
+    $node_fr->title = 'Questions / Réponses';
+    $node_fr->body->value = 'inserer votre texte ici!';
+    $node_fr->body->format = 'basic_html';
+    $node_fr->save();
+    $alias_storage = \Drupal::service('path.alias_storage');
+    $alias_storage->delete(array('alias' =>  '/aide'));
+    $alias_storage->delete(array('alias' =>  '/help'));
+    $alias_storage->save("/node/" . $node->id(), "/aide", 'fr');
+    $alias_storage->save("/node/" . $node->id(), "/help", 'en');
+
+  }
+}
 
 
-   if(true){
-       //Creating FAQ node
-       $node = Node::create([
-           'type'             => 'page',
-           'title'            => 'Frequently Asked Questions',
-           'body'             => 'insert your content here!',
-           'langcode'         => 'en',
-           'format'           => 'basic_html',
-           'moderation_state' => 'published',
-           'uid'              => 1,
-           'path'             => '/help',
-       ]);
-       $node->save();
 
-       //Translating FAQ node
-       $node_fr = $node->addTranslation('fr');
-       $node_fr->title = 'Questions / Réponses';
-       $node_fr->body->value = 'inserer votre texte ici!';
-       $node_fr->body->format = 'basic_html';
-       $node_fr->path = '/aide';
-       $node_fr->save();
-   }
+/**
+ * Drush command logic.
+ * drush_[MODULE_NAME]_[COMMAND_NAME]().
+ */
+function drush_cogecotv_fixtures_create_users() {
+
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+
+  $usersInfo = array(
+      array('userName' => 'SystemAdmin', 'role' => 'administrator'),
+      array('userName' => 'Webmaster','role' => 'webmaster'),
+      array('userName' => 'StationManager','role' => 'station_manager'),
+      array('userName' => 'LocalProducer', 'role' => 'local_producer'),
+      );
+
+  foreach($usersInfo as $userInfo) {
+    $userName = $userInfo['userName'];
+
+    $user = \Drupal\user\Entity\User::create();
+    //Mandatory settings
+    $user->setPassword('password');
+    $user->enforceIsNew();
+    $user->setEmail($userName . '@cogecotv.com');
+    $user->setUsername($userName);//This username must be unique and accept only a-Z,0-9, - _ @ .
+
+    //Optional settings
+    $user->set('init', 'email');
+    $user->set('langcode', $language);
+    $user->set('preferred_langcode', $language);
+    $user->set('preferred_admin_langcode', $language);
+    $user->addRole($userInfo['role']);
+    //$user->set("setting_name", 'setting_value');
+    $user->activate();
+
+    //Save user
+    $res = $user->save();
+  }
 
 
 }

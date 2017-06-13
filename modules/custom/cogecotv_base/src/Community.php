@@ -20,10 +20,12 @@ class Community extends Term {
    }
   }
   
-  public function getProvince() {
+  public static function getProvince($community) {
     $storage = \Drupal::service('entity_type.manager')->getStorage('taxonomy_term');
-    $current_community_id = $this->id();
+    $current_community_id = $community->id();
     $parents = $storage->loadParents($current_community_id);
     $province = current($parents);
+
+    return $province;
   }
 }

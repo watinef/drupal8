@@ -24,9 +24,9 @@ class NavigationBlock extends CogecoTvBlock {
 
   function build() {
     $result = [];
-    $community = $this->cogecotv->getCommunity();
+    $community = $this->session->getCurrentCommunity();
     if ($community) {
-      $quicklinks = $this->cogecotv->quickLinks('community_navigation', $this->cogecotv->getCommunity());
+      $quicklinks = $this->navigation->quickLinks('community_navigation', $this->session->getCurrentCommunity());
 
       foreach ($quicklinks as  &$value) {
         $value['url'] = '/' . $community->field_machine_name->getString() . $value['url'];

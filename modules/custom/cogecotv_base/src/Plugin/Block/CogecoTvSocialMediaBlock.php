@@ -3,7 +3,7 @@ namespace Drupal\cogecotv_base\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\cogecotv_base\Community;
-use Drupal\cogecotv_base\Cogecotv;
+use Drupal\cogecotv_base\CogecotvSession;
 use Drupal\cogecotv_base\Plugin\Block\CogecoTvBlock;
 
 /**
@@ -17,7 +17,7 @@ use Drupal\cogecotv_base\Plugin\Block\CogecoTvBlock;
 class CogecoTvSocialMediaBlock extends CogecoTvBlock {
 
     function build() {
-        $currentCommunity = $this->cogecotv->getCommunity();
+        $currentCommunity = $this->session->getCurrentCommunity();
 
         $build = array(
             '#theme' => 'social_media',

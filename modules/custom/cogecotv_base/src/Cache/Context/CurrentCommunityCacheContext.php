@@ -3,7 +3,7 @@ namespace Drupal\cogecotv_base\Cache\Context;
 
 use Drupal\Core\Cache\CacheableMetadata;
 use Drupal\Core\Cache\Context\CacheContextInterface;
-use Drupal\cogecotv_base\Cogecotv;
+use Drupal\cogecotv_base\CogecotvSession;
 
 /**
  * Defines the CurrentCommunityContext service, for "current community" caching.
@@ -14,7 +14,7 @@ class CurrentCommunityCacheContext implements CacheContextInterface {
 
     protected $cogecotv;
 
-    public function __construct(Cogecotv $cogecotv) {
+    public function __construct(CogecotvSession $cogecotv) {
         $this->cogecotv = $cogecotv;
     }
     
@@ -29,7 +29,14 @@ class CurrentCommunityCacheContext implements CacheContextInterface {
      * {@inheritdoc}
      */
     public function getContext() {
-        return $this->cogecotv->getCommunity()->field_machine_name->getString();
+        if ($community = $this->cogecotv->getCurrentCommunity()) {
+          $context =  $community->field_machine_name->getString();
+        }
+        else {
+          $context = 'no-community';
+        }
+
+        return $context;
     }
 
     /**

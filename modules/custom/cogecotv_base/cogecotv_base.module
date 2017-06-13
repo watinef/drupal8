@@ -5,6 +5,8 @@ use Drupal\Component\Utility\Html;
 use Drupal\Component\Utility\Unicode;
 use Drupal\filter\Entity\FilterFormat;
 
+use \Drupal\cogecotv_base\Form\PublishVideo;
+
 /**
  * Implements hook_theme().
  */
@@ -66,6 +68,20 @@ function cogecotv_base_theme($existing, $type, $theme, $path) {
   );
   return $variables;
 }
+
+/**
+ * Add custom behavior to video edit form
+ *
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
+ */
+function cogecotv_base_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'node_videos_edit_form' || $form_id == 'node_videos_form') {
+    PublishVideo::formAlter($form, $form_state, $form_id);
+  }
+}
+
 
 /**
  * Generates a collapsible text.
@@ -216,4 +232,14 @@ function cogecotv_preprocess_region(&$variables) {
   // We get the path by alias because it is a created content
   // and node id is unpredictable
   $variables['url_help'] = Url::fromUri('internal:/help', ['language' => $language]);
+}
+
+function cogecotv_preprocess_page_title(&$variables) {
+  $navigation = \Drupal::service('cogecotv_base.navigation');
+  $session = \Drupal::service('cogecotv_base.session');
+  $community_name = $session->getCurrentCommunity()->field_machine_name->getString();
+  $page = \Drupal::routeMatch()->getParameter('page');
+  $get_subtitle = $navigation->getSubTitlePage($community_name, $page);
+  $subtitle = !empty($get_subtitle) ? $get_subtitle : '';
+  $variables['sub_title'] = t($subtitle);
 }

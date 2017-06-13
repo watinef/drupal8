@@ -38,7 +38,7 @@ class LanguageNegotiationCommunity extends LanguageNegotiationUrl {
    */
   public function getLangcode(Request $request = NULL) {
     $langcode = NULL;
-    $cogecotv =\Drupal::service('cogecotv_base.cogecotv');
+    $cogecotv =\Drupal::service('cogecotv_base.session');
     $community = NULL;
     $community_selection_url = Url::fromRoute('cogecotv_base.community_selection_page')->toString();
 
@@ -56,7 +56,7 @@ class LanguageNegotiationCommunity extends LanguageNegotiationUrl {
         $cogecotv->setCommunity($community);
       }
       else {
-        $community = $cogecotv->getCommunity();
+        $community = $cogecotv->getCurrentCommunity();
       }
       if ($community) {
         $community_language = $community->field_language->getString();

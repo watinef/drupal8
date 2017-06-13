@@ -1,6 +1,7 @@
 <?php
 namespace Drupal\cogecotv_base\Controller;
 
+use Drupal\cogecotv_base\CogecoTvNavigation;
 use Drupal\cogecotv_base\Community;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Url;
@@ -16,20 +17,23 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 */
 class CogecoTvBaseController extends ControllerBase {
 
-  protected $cogecotv;
+  protected $session;
+  protected $navigation;
 
   /**
    * {@inheritdoc}
    */
 
-  public function __construct($cogecotv) {
-    $this->cogecotv = $cogecotv;
+  public function __construct($cogecotv, $navigation) {
+    $this->session = $cogecotv;
+    $this->navigation = $navigation;
   }
 
   public static function create(ContainerInterface $container)
   {
-    $cogecotv = $container->get('cogecotv_base.cogecotv');
-    return new static($cogecotv);
+    $cogecotv = $container->get('cogecotv_base.session');
+    $navigation = $container->get('cogecotv_base.navigation');
+    return new static($cogecotv, $navigation);
   }
 
 
@@ -37,7 +41,7 @@ class CogecoTvBaseController extends ControllerBase {
    * {@inheritdoc}
    */
   public function home_page() {
-    $community = $this->cogecotv->getCommunity();
+    $community = $this->session->getCurrentCommunity();
 
     if (!empty($community)) {
      $url = Url::fromRoute('cogecotv_base.community_home_page', ['community' => $community->field_machine_name->getString()])->toString();
@@ -50,11 +54,12 @@ class CogecoTvBaseController extends ControllerBase {
   }
 
     /**
-   * {@inheritdoc}
-   */
+     * @param $community
+     * @param $page
+     * @return mixed
+     */
   public function community_subpage($community, $page) {
-    $community = $this->cogecotv->getCommunity();
-    $page_name = $this->cogecotv->matchQuicklink('community_navigation', $community, '/' . $page);
+    $page_name = $this->navigation->matchQuicklink('community_navigation', $community, '/' . $page);
     $method_name = 'community_subpage_' . $page_name;
 
     if (method_exists($this, $method_name)) {
@@ -66,10 +71,18 @@ class CogecoTvBaseController extends ControllerBase {
   }
 
   public function community_subpage_shows() {
-    $community = $this->cogecotv->getCommunity();
-
+    $community = $this->session->getCurrentCommunity();
     $view = Views::getView('shows');
-    $build['view'] = $view->buildRenderable('embed_1',array($community->field_machine_name->getString()));
+    $build['view'] = $view->buildRenderable('embed_1', array($community->field_machine_name->getString()));
+
+    return $build;
+  }
+
+  public function community_subpage_videos() {
+    $community = $this->session->getCurrentCommunity();
+
+    $view = Views::getView('videos');
+    $build['view'] = $view->buildRenderable('embed_1', array($community->field_machine_name->getString()));
 
     return $build;
   }
@@ -87,7 +100,7 @@ class CogecoTvBaseController extends ControllerBase {
   }
 
   public function community_home_page() {
-    $community = $this->cogecotv->getCommunity();
+    $community = $this->session->getCurrentCommunity();
     $build = array(
       '#theme' => 'community_home_page',
       '#community' => $community,
@@ -123,4 +136,16 @@ class CogecoTvBaseController extends ControllerBase {
         return $build;
 
     }
+
+  /**
+   * Get Title
+   * @param $community
+   * @param $page
+   * @return \Drupal\Core\StringTranslation\TranslatableMarkup|void
+   */
+  public function communitySubpageTitle($community, $page) {
+    $get_title = $this->navigation->getTitlePage($community, $page);
+    $title = !empty($get_title) ? $get_title : '';
+    return t($title);
+  }
 }

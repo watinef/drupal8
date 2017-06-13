@@ -23,9 +23,8 @@ use  Drupal\cogecotv_base\Plugin\Block\CogecoTvBlock;
 class TopHeaderBlock extends CogecoTvBlock {
 
   function build() {
-    if ($this->cogecotv->getCommunity()) {
-      $province = $this->cogecotv->getProvince()->field_machine_name->value;
-      $quicklinks = $this->cogecotv->quickLinks('top_header', $province);
+    if ($community = $this->session->getCurrentCommunity()) {
+      $quicklinks = $this->navigation->quickLinks('top_header', $community);
 
       return [
         '#theme' => 'top_header',

@@ -8,16 +8,14 @@
 
 namespace Drupal\cogecotv_base;
 
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-
 use Drupal\user\PrivateTempStoreFactory;
 use Drupal\Core\Session\SessionManager;
 
 /**
- * Main Cogecotv class
+ * Main CogecotvSession class
  */
 
-class Cogecotv  {
+class CogecotvSession  {
   protected $session_manager;
   protected $tempstore;
 
@@ -31,7 +29,7 @@ class Cogecotv  {
     $this->tempstore->get('cogecotv_base')->set('current_community', $community);
   }
 
-  public function getCommunity() {
+  public function getCurrentCommunity() {
     $community =  Community::load(\Drupal::routeMatch()->getParameter('community'));
     if (empty($community)) {
       $community = $this->getCommunityBySession();
@@ -58,8 +56,8 @@ class Cogecotv  {
     }
   }
 
-  public function getProvince(){
-    $community = $this->getCommunity();
+  public function getCurrentProvince(){
+    $community = $this->getCurrentCommunity();
     $province = NULL;
 
     if(!empty($community)) {
@@ -70,47 +68,5 @@ class Cogecotv  {
     }
 
     return $province;
-  }
-
-  public function quickLinks($type, $community) {
-    $config = \Drupal::config('cogecotv_base.quicklinks');
-    $quicklinks = [];
-
-    if (!empty($config)) {
-      foreach ($config->get($type) as $config_key => $config_value) {
-
-        $item =  $this->normalizeCommunityData($config_value, $community);
-        $quicklinks[$config_key] = array(
-          'title' => t($item['title']),
-          'url' => t($item['url']),
-        );
-      }
-    }
-
-    return $quicklinks;
-  }
-
-  public function matchQuicklink($type, $community, $path) {
-    $page = NULL;
-    $config = \Drupal::config('cogecotv_base.quicklinks');
-
-    if (!empty($config)) {
-      foreach ($config->get($type) as $config_key => $config_value) {
-        $item =  $this->normalizeCommunityData($config_value, $community);
-        if ($item['url'] == $path) {
-            $page = $config_key;
-            break;
-          }
-      }
-    }
-
-    return $page;
-
-  }
-
-  public function normalizeCommunityData($data, $community, $language = NULL) {
-    $province = $this->getProvince()->field_machine_name->getString();
-
-    return array_merge($data['all'], !empty($data[$province])?$data[$province]:array());
   }
 }

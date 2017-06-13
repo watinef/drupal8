@@ -22,7 +22,7 @@ cogecotv_base.community_subpage:
   path: '/community/{community}/{page}'
   defaults:
     _controller: '\Drupal\cogecotv_base\Controller\CogecoTvBaseController::community_subpage'
-    _title: 'Welcome to CogecoTV'
+    _title_callback: '\Drupal\cogecotv_base\Controller\CogecoTvBaseController::communitySubpageTitle'
   requirements:
     _permission: 'access content'
 cogecotv_base.error_404:
