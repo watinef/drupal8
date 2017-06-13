@@ -1,0 +1,287 @@
+/* GENERAL THEMING */
+.tabs--primary{
+	position: fixed;
+	left: 0;
+	top: 60%;
+	width: auto;
+	display: table;
+    background: #1f86c7;
+}
+.tabs--primary li{
+	float: none;
+	margin: 0;
+	padding: 0;
+	border: none !important;
+	border-radius: 0 !important;
+}
+.tabs--primary li{
+	margin: 0;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+}
+.tabs--primary li:hover{
+	background: #0c97ed;
+}
+.tabs--primary li a{
+	color: #fff;
+	margin: 0;
+	padding: 11px 7px;
+	text-align: center;
+	border: none;
+	border-radius: 0;
+}
+.tabs--primary li.active a, 
+.tabs--primary li.active a:active,
+.tabs--primary li.active a:hover, 
+.tabs--primary li.active a:focus,
+.tabs--primary > li > a:hover{
+	color: #fff;
+	width: 100%;
+	margin: 0;
+	display: block;
+	text-align: center;
+	border: none;
+	border-radius: 0;
+	background: #0c97ed;
+	background-color: #0c97ed;
+}
+
+/* HEADER THEMING */
+.navbar{
+	border-radius: 0;
+    margin-top: 15px;
+}
+.navbar-default{
+	background-color: #333;
+	border-color: #333;
+}
+.navbar-default .navbar-nav > li > a{
+	color: #fff;
+}
+.navbar-default .navbar-nav > li:hover > a,
+.navbar-default .navbar-nav > li:hover > a:hover{
+	color: #fff !important;
+	cursor: pointer;
+}
+.nav > li{
+    display: inline-block;
+}
+.logo img{
+	width: 100%;
+	max-width: 100%;
+}
+.navbar-header{
+	width: 100%;
+}
+#block-cogecotv-main-menu{
+	display: inline-table;
+}
+#block-cogecotv-search{
+	display: inline-table;
+	float: right;
+	margin-top:10px; 
+}
+#block-cogecotv-search .form-group{
+	margin-bottom: 0;
+}
+.header-links{
+	display: inline-block;
+    text-align: right;
+}
+.weather{
+    min-height: auto;
+    display: inline-block;
+    direction: ltr;
+}
+.weather .city{
+  background: #014282;
+  color: #fff;
+  padding: 4px 15px;
+  text-align: center;
+}
+.weather img{
+	
+}
+.weather .info{
+  background: #00a9ec;
+  color: #fff;
+  padding: 8px 15px;
+  font-size: 18px;
+}
+.weather .info .icon{
+ font-size: 28px;	
+ font-weight: bold;
+}
+.weather .info i,
+.weather .info p{
+	display: inline-block;
+    vertical-align: top;
+}
+.weather .info .temperature{
+	
+}
+.weather .info .degreeC{
+	
+}
+
+
+
+
+
+
+/* SIDES THEMING */   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PAGE LAYOUT THEMING */
+
+.footer{
+	margin-top: 5px;
+	background-color: #333;
+	border-color: #333;
+	padding: 10px 20px;
+	color: white;
+}
+.footer #block-socialmediafooter .list-inline{
+	margin-bottom: 0;
+}
+#block-socialmediafooter li a{
+	color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CONTENT THEMING */
+.headline h2,h3 {
+	color:black;
+}
+
+.cta-content h3 {
+	margin: 0px;
+}
+
+.cta-content {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: lightgrey;
+    background-size: cover;
+	padding: 10px;
+	height: 150px;
+}
+
+.cta-link {
+
+	position: absolute;
+	bottom: 0;
+	padding-bottom: 10px;
+}
+
+span.inline-collapse.in {
+	display: inline;
+}
+
+
+
+
+
+
+
+
+
+
+/* VIEWS THEMING */
+.view{
+	margin: 30px 0;
+}
+.views-row{
+}
+.host-details{
+	border: 1px solid #333;
+	margin-bottom: 10px;
+	padding: 15px;
+}
+.host-title{
+	float: left;
+}
+.host-image{
+	float: left;
+	margin: 0 10px 10px 0;
+}
+.host-body{
+	clear: both;
+	padding: 10px 0;
+}
+
+
+
+
+
+
+
+
+
+/* BLOCK THEMING */
+
+
+
+
+
+
+
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width:767px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:992px) {
+
+}
+
+@media screen and (min-width:1200px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+

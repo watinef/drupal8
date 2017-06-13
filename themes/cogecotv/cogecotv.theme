@@ -1,0 +1,10 @@
+<?php
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+function cogecotv_preprocess_footer(&$variables) {
+    $variables['url_help'] = \Drupal::service('path.alias_manager')->getAliasByPath('/aide');
+}

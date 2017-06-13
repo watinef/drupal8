@@ -1,0 +1,18 @@
+<article{{ attributes }}>
+    <div class="carousel slide" data-ride="carousel">
+    <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <a href="{{ content.field_link|field_value }}">
+                    {{ content.field_image }}
+                    <div class="carousel-caption">
+                        <h3>{{ label }}</h3>
+                        {% if content.body|field_value %}
+                        <p>{{ content.body }}</p>
+                        {% endif %}
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</article>

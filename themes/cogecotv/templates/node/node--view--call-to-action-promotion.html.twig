@@ -1,0 +1,17 @@
+<article{{ attributes }}>
+    <a href="{{ content.field_link|field_value }}">
+        <div class="cta-content" style="background-image: url('{{ file_url(content.field_image|field_target_entity.uri.value) }}')">
+            {{ title_prefix }}
+            {% if not page %}
+                <h3{{ title_attributes }}>
+                    {{ label }}
+                </h3>
+            {% endif %}
+            {{ title_suffix }}
+
+            <div class="cta-body">
+                {{ content.body }}
+            </div>
+        </div>
+    </a>
+</article>

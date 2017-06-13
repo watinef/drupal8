@@ -1,0 +1,17 @@
+<article class="col-md-8">
+
+    {% if content.field_subtitle %}
+        <h3>{{ content.field_subtitle }}</h3>
+    {% endif %}
+
+
+    {% if content.body %}
+        <p>{{ content.body }}</p>
+    {% endif %}
+
+        
+    {{ drupal_view('videos', 'tv_show_recent_videos', node.id) }}
+
+</article>
+
+{{ drupal_view('hosts', 'embed_1', node.id) }}
