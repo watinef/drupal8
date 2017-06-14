@@ -1,0 +1,23 @@
+uuid: bcc1d011-5011-4f6d-8f0a-6bfdcff55ffb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_social_twitter
+    - taxonomy.vocabulary.communities
+  module:
+    - link
+id: taxonomy_term.communities.field_social_twitter
+field_name: field_social_twitter
+entity_type: taxonomy_term
+bundle: communities
+label: 'Social Media Twitter'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

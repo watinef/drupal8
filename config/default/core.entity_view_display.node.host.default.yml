@@ -1,0 +1,50 @@
+uuid: ab893184-9248-4e3c-a1ab-abdd7562fb1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.host.body
+    - field.field.node.host.field_image
+    - field.field.node.host.field_tv_shows
+    - image.style.large
+    - node.type.host
+  module:
+    - image
+    - text
+    - user
+id: node.host.default
+targetEntityType: node
+bundle: host
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_tv_shows:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

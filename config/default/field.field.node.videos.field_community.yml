@@ -1,0 +1,25 @@
+uuid: 6699eca2-01b5-4252-b462-3570d49ac6ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_community
+    - node.type.videos
+id: node.videos.field_community
+field_name: field_community
+entity_type: node
+bundle: videos
+label: Community
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: community_selection
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

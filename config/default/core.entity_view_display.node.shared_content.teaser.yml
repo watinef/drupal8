@@ -1,0 +1,19 @@
+uuid: 72dc6b24-275c-43f4-8be2-bfedeef11e49
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.shared_content
+  module:
+    - user
+id: node.shared_content.teaser
+targetEntityType: node
+bundle: shared_content
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

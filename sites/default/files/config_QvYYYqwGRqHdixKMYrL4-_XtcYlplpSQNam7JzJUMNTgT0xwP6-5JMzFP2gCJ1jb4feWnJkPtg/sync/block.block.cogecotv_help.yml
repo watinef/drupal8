@@ -1,0 +1,22 @@
+uuid: 445e6d7f-683f-439c-80a2-fb85b33c41fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - cogecotv
+_core:
+  default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
+id: cogecotv_help
+theme: cogecotv
+region: help
+weight: -5
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

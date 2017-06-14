@@ -1,0 +1,22 @@
+uuid: 0ebf96fe-8673-4c66-afc7-fd1ba0cd69e3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.tv_show
+id: node.tv_show.status
+field_name: status
+entity_type: node
+bundle: tv_show
+label: 'Statut de publication'
+description: 'Un booléen indiquant l''état de publication.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

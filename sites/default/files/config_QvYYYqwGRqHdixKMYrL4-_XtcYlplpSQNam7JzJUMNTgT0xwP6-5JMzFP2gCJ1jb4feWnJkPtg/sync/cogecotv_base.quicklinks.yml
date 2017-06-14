@@ -1,0 +1,44 @@
+top_header:
+  cogeco_ca:
+    all:
+      url: 'https://www.cogeco.ca'
+      title: cogeco.ca
+  my_account:
+    all:
+      title: 'My Account'
+    ontario:
+      url: 'https://www.cogeco.ca/web/on/en/my_cogeco/'
+    quebec:
+      url: 'https://www.cogeco.ca/web/qc/en/my_cogeco/'
+  promotions:
+    all:
+      title: Promotions
+    ontario:
+      url: 'https://www.cogeco.ca/web/on/en/residential/whats_new/promotion/#promotions'
+    quebec:
+      url: 'https://www.cogeco.ca/web/qc/en/residential/bundles_promotions'
+community_navigation:
+  shows:
+    all:
+      title: Shows
+      url: /shows
+  videos:
+    all:
+      title: Videos
+      url: /videos
+  schedule:
+    all:
+      title: Schedule
+      url: /schedule
+  volunteers:
+    all:
+      title: Volunteers
+      url: /volunteers
+  partners:
+    all:
+      title: Partners
+      url: /partners
+  bulletin_board:
+    all:
+      title: 'Community Bulletin Board'
+      url: /bulletin-board

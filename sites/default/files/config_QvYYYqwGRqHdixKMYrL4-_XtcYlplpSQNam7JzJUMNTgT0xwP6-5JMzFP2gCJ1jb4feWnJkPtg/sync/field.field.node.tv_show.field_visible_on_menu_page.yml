@@ -1,0 +1,23 @@
+uuid: 050737be-7c7d-4b4d-858e-3688b6632258
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_visible_on_menu_page
+    - node.type.tv_show
+id: node.tv_show.field_visible_on_menu_page
+field_name: field_visible_on_menu_page
+entity_type: node
+bundle: tv_show
+label: 'Visible on TV show menu page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

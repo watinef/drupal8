@@ -1,0 +1,14 @@
+uuid: b2eb0737-60db-4d59-b40d-067be00f72fe
+langcode: en
+status: true
+dependencies: {  }
+name: host_thumbnail
+label: 'host thumbnail'
+effects:
+  a59f4734-0164-4d90-ab34-50e50a282745:
+    uuid: a59f4734-0164-4d90-ab34-50e50a282745
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 150
+      height: 150

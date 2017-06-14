@@ -1,0 +1,14 @@
+uuid: 22345f23-e7ea-447a-b38b-5faf20722099
+langcode: fr
+status: true
+dependencies: {  }
+name: headline
+label: Headline
+effects:
+  e7a53ee2-3be0-45ee-824b-a0ab9fad9ddb:
+    uuid: e7a53ee2-3be0-45ee-824b-a0ab9fad9ddb
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 800
+      height: 400

@@ -1,0 +1,16 @@
+uuid: 24cd210a-eb78-4abe-ae6f-56e6f848ad24
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.call_to_action_promotion
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: node.call_to_action_promotion
+target_entity_type_id: node
+target_bundle: call_to_action_promotion
+default_langcode: site_default
+language_alterable: false

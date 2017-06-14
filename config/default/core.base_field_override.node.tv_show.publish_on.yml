@@ -1,0 +1,18 @@
+uuid: ce694da6-c469-4862-a10f-615665ce835d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.tv_show
+id: node.tv_show.publish_on
+field_name: publish_on
+entity_type: node
+bundle: tv_show
+label: 'Publish on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

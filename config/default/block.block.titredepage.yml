@@ -1,0 +1,23 @@
+uuid: 65058bf9-b7f8-4e2d-bc62-6aca1b0c0555
+langcode: fr
+status: true
+dependencies:
+  module:
+    - block_class
+  theme:
+    - cogecotv
+third_party_settings:
+  block_class:
+    classes: ''
+id: titredepage
+theme: cogecotv
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Titre de page'
+  provider: core
+  label_display: '0'
+visibility: {  }

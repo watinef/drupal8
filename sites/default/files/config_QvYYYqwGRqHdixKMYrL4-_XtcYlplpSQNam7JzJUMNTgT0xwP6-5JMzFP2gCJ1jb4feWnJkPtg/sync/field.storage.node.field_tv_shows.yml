@@ -1,0 +1,19 @@
+uuid: 375c2d5a-2be8-49b1-9eff-48637cbfbfc5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_tv_shows
+field_name: field_tv_shows
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

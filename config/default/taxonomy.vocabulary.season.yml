@@ -1,0 +1,9 @@
+uuid: 8ebace26-b2ac-4107-99ec-8aa7ad74e6a0
+langcode: fr
+status: true
+dependencies: {  }
+name: Season
+vid: season
+description: 'A TV show season name'
+hierarchy: 0
+weight: 0

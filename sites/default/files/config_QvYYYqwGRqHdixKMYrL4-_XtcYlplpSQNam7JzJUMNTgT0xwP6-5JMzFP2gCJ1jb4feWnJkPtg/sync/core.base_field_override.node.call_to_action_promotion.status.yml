@@ -1,0 +1,22 @@
+uuid: f33c066e-8665-45d1-9a77-89184621837c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.call_to_action_promotion
+id: node.call_to_action_promotion.status
+field_name: status
+entity_type: node
+bundle: call_to_action_promotion
+label: 'Statut de publication'
+description: 'Un booléen indiquant l''état de publication.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

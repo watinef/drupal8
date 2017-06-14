@@ -1,0 +1,19 @@
+uuid: acbf95f0-33cd-49a9-a819-19e0ca00a0a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_videos_subtitle
+    - taxonomy.vocabulary.communities
+id: taxonomy_term.communities.field_videos_subtitle
+field_name: field_videos_subtitle
+entity_type: taxonomy_term
+bundle: communities
+label: 'Videos Subtitle'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

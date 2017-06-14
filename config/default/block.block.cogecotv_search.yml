@@ -1,0 +1,22 @@
+uuid: fb44a66b-be48-4b58-9475-846a823f3162
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - cogecotv
+_core:
+  default_config_hash: F3d5hyAFunLh4PhGviJF019fHn1Z3_zy5gzsQ0tX1K0
+id: cogecotv_search
+theme: cogecotv
+region: navigation_collapsible
+weight: -7
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }

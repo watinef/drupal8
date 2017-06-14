@@ -1,0 +1,89 @@
+uuid: d6481ffa-5931-4f70-9647-90c676594f56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.communities.field_language
+    - field.field.taxonomy_term.communities.field_machine_name
+    - field.field.taxonomy_term.communities.field_social_facebook
+    - field.field.taxonomy_term.communities.field_social_twitter
+    - field.field.taxonomy_term.communities.field_social_youtube
+    - field.field.taxonomy_term.communities.field_station
+    - taxonomy.vocabulary.communities
+  module:
+    - link
+    - options
+    - text
+id: taxonomy_term.communities.default
+targetEntityType: taxonomy_term
+bundle: communities
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_language:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_machine_name:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_social_facebook:
+    weight: 3
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_social_twitter:
+    weight: 4
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_social_youtube:
+    weight: 5
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_station:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true

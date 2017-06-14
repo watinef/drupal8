@@ -1,0 +1,44 @@
+top_header:
+  cogeco_ca:
+    all:
+      url: 'https://www.cogeco.ca'
+      title: cogeco.ca
+  my_account:
+    all:
+      title: 'Mon Compte'
+    ontario:
+      url: 'https://www.cogeco.ca/web/on/fr/mon_cogeco/'
+    quebec:
+      url: 'https://www.cogeco.ca/web/qc/fr/mon_cogeco/'
+  promotions:
+    all:
+      title: Promotions
+    ontario:
+      url: 'https://www.cogeco.ca/web/on/fr/residentiel/forfaits_promotions'
+    quebec:
+      url: 'https://www.cogeco.ca/web/qc/fr/residentiel/forfaits_promotions/#promotions'
+community_navigation:
+  shows:
+    all:
+      title: Émissions
+      url: /emissions
+  videos:
+    all:
+      title: Vidéos
+      url: /videos
+  schedule:
+    all:
+      title: Horaire
+      url: /horaire
+  volunteers:
+    all:
+      title: Bénévoles
+      url: /benevoles
+  partners:
+    all:
+      title: Partenaires
+      url: /partenaires
+  bulletin_board:
+    all:
+      title: Babillard
+      url: /babillard

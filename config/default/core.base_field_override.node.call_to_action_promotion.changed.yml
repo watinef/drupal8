@@ -1,0 +1,18 @@
+uuid: d5a900ca-b48b-4fe5-93fa-772d9ac29c76
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.call_to_action_promotion
+id: node.call_to_action_promotion.changed
+field_name: changed
+entity_type: node
+bundle: call_to_action_promotion
+label: Modifié
+description: 'Le moment auquel le nœud a été modifié pour la dernière fois.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

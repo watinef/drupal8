@@ -1,0 +1,18 @@
+uuid: 3c9b2ef2-a88c-418e-9f47-8745a8528d9a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.tv_show
+id: node.tv_show.moderation_state
+field_name: moderation_state
+entity_type: node
+bundle: tv_show
+label: 'État de modération'
+description: 'L''état de modération de cet élément de contenu.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,24 @@
+uuid: 42656cfb-67d2-4d50-bc10-5409494c4d05
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - cogecotv_base
+  theme:
+    - cogecotv
+third_party_settings:
+  block_class:
+    classes: ''
+id: communitybloc
+theme: cogecotv
+region: header_second
+weight: -5
+provider: null
+plugin: cogecotv_base_community_block
+settings:
+  id: cogecotv_base_community_block
+  label: 'Bloc de communauté'
+  provider: cogecotv_base
+  label_display: '0'
+visibility: {  }

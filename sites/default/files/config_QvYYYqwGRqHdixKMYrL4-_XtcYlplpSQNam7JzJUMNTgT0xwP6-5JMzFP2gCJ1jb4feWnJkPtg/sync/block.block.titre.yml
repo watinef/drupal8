@@ -1,0 +1,33 @@
+uuid: 39a2b95a-333f-4aea-96c4-9bde21ea801f
+langcode: fr
+status: true
+dependencies:
+  module:
+    - block_class
+    - ctools_block
+  theme:
+    - cogecotv
+third_party_settings:
+  block_class:
+    classes: ''
+id: titre
+theme: cogecotv
+region: content
+weight: -7
+provider: null
+plugin: 'entity_field:node:title'
+settings:
+  id: 'entity_field:node:title'
+  label: Titre
+  provider: ctools_block
+  label_display: '0'
+  formatter:
+    label: above
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+  context_mapping:
+    entity: '@node.node_route_context:node'
+visibility: {  }

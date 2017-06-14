@@ -1,0 +1,23 @@
+uuid: 6a0df3fc-827f-4bbf-9bff-8274e6d20a67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.call_to_action_promotion
+  module:
+    - link
+id: node.call_to_action_promotion.field_link
+field_name: field_link
+entity_type: node
+bundle: call_to_action_promotion
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

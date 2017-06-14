@@ -1,0 +1,20 @@
+uuid: 292a8e0d-659c-4795-8136-1123c9087e9a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.call_to_action_promotion
+id: node.call_to_action_promotion.uid
+field_name: uid
+entity_type: node
+bundle: call_to_action_promotion
+label: 'Écrit par'
+description: 'Le nom d''utilisateur de l''auteur du contenu.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

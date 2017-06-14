@@ -1,0 +1,18 @@
+uuid: 31906c68-6bc9-4fce-98cc-88f174cc4ac4
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.communities
+id: taxonomy_term.communities.name
+field_name: name
+entity_type: taxonomy_term
+bundle: communities
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

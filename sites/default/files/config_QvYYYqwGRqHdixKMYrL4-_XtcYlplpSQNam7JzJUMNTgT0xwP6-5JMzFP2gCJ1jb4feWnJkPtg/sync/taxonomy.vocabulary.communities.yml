@@ -1,0 +1,9 @@
+uuid: 62bddd9c-ea3c-4306-9b51-fff8908726e5
+langcode: en
+status: true
+dependencies: {  }
+name: Communities
+vid: communities
+description: ''
+hierarchy: 1
+weight: 0

@@ -1,0 +1,25 @@
+uuid: 2bc51da1-3de9-4a64-9156-800388b73208
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tv_show
+    - node.type.videos
+id: node.videos.field_tv_show
+field_name: field_tv_show
+entity_type: node
+bundle: videos
+label: 'TV show'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: tv_show_selection
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

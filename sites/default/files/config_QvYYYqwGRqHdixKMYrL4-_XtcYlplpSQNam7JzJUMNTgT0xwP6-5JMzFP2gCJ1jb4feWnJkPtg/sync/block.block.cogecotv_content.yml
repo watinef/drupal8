@@ -1,0 +1,22 @@
+uuid: d797db4a-f37f-4bcf-a301-8ca6c1dfad10
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - cogecotv
+_core:
+  default_config_hash: fNNLN48MSGSLiqwIFywCuxH2Dk_IxDbaP0kYhg_IPrg
+id: cogecotv_content
+theme: cogecotv
+region: content
+weight: -6
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

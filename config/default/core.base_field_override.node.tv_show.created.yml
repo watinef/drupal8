@@ -1,0 +1,18 @@
+uuid: 35410858-99be-4206-90f0-505c53e690ae
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.tv_show
+id: node.tv_show.created
+field_name: created
+entity_type: node
+bundle: tv_show
+label: 'Écrit le'
+description: 'L''heure à laquelle le nœud a été créé.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

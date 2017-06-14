@@ -1,0 +1,18 @@
+uuid: fabdf040-2145-429c-abe0-17bb73571c2a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.call_to_action_promotion
+id: node.call_to_action_promotion.title
+field_name: title
+entity_type: node
+bundle: call_to_action_promotion
+label: Titre
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

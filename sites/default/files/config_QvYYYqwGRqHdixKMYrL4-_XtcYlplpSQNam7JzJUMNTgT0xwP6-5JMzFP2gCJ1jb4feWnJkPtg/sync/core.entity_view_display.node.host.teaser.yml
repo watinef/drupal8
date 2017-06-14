@@ -1,0 +1,31 @@
+uuid: c50e4cde-ff7f-4405-8122-0f8094830e69
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.host.body
+    - node.type.host
+  module:
+    - text
+    - user
+id: node.host.teaser
+targetEntityType: node
+bundle: host
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_image: true
+  field_tv_shows: true
+  langcode: true

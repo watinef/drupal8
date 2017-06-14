@@ -1,0 +1,18 @@
+uuid: f0badace-4de0-43e3-b059-38d920a84d5b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.tv_show
+id: node.tv_show.changed
+field_name: changed
+entity_type: node
+bundle: tv_show
+label: Modifié
+description: 'Le moment auquel le nœud a été modifié pour la dernière fois.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

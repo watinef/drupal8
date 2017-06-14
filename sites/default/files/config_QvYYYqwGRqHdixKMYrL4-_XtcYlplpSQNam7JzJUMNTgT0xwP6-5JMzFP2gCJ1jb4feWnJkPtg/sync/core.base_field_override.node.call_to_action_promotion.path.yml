@@ -1,0 +1,20 @@
+uuid: 0dc52abb-b5bc-4d51-afbb-fd947797cd76
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.call_to_action_promotion
+  module:
+    - path
+id: node.call_to_action_promotion.path
+field_name: path
+entity_type: node
+bundle: call_to_action_promotion
+label: 'Alias d''URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

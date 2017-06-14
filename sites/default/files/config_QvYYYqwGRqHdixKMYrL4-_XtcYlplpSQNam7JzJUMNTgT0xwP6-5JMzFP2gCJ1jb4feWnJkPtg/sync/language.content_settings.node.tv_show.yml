@@ -1,0 +1,16 @@
+uuid: 99280637-3688-4dc8-9eb7-244cfc2c8ec1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.tv_show
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: node.tv_show
+target_entity_type_id: node
+target_bundle: tv_show
+default_langcode: site_default
+language_alterable: false

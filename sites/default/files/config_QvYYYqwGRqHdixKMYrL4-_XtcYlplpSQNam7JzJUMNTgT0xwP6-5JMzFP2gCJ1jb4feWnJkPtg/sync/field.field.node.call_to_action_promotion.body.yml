@@ -1,0 +1,22 @@
+uuid: 4ae35aa1-8e4b-471b-961b-db463b8526d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.call_to_action_promotion
+  module:
+    - text
+id: node.call_to_action_promotion.body
+field_name: body
+entity_type: node
+bundle: call_to_action_promotion
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

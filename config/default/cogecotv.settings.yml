@@ -1,0 +1,34 @@
+schemas:
+  bootstrap: 8000
+  cogecotv: 8000
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: ''
+  url: 'http://localhost:8888/var/www/cogeco-tv-drupal/docroot/themes/cogecotv/favicon.ico'
+  use_default: true
+logo:
+  path: 'public://logo.png'
+  url: ''
+  use_default: false
+region_wells:
+  top_header: ''
+  header: ''
+  header_first: ''
+  header_second: ''
+  header_third: ''
+  navigation: ''
+  navigation_collapsible: ''
+  highlighted: ''
+  help: ''
+  content: ''
+  sidebar_first: ''
+  sidebar_second: ''
+  footer: ''
+fluid_container: 0
+cdn_provider_import_data: ''
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+table: ''

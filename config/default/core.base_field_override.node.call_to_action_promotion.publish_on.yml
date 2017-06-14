@@ -1,0 +1,18 @@
+uuid: 4b26b775-075a-46eb-9dfa-6b11cfcbe770
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.call_to_action_promotion
+id: node.call_to_action_promotion.publish_on
+field_name: publish_on
+entity_type: node
+bundle: call_to_action_promotion
+label: 'Publish on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

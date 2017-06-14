@@ -1,0 +1,28 @@
+uuid: 63a7d864-92d4-479b-ab02-2eaf99df5662
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_community
+    - node.type.call_to_action_promotion
+    - taxonomy.vocabulary.communities
+id: node.call_to_action_promotion.field_community
+field_name: field_community
+entity_type: node
+bundle: call_to_action_promotion
+label: Community
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      communities: communities
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

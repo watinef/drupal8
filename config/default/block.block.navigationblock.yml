@@ -1,0 +1,24 @@
+uuid: e6b4165d-6dfd-491f-98de-f67e64873c57
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - cogecotv_base
+  theme:
+    - cogecotv
+third_party_settings:
+  block_class:
+    classes: ''
+id: navigationblock
+theme: cogecotv
+region: navigation_collapsible
+weight: -6
+provider: null
+plugin: cgtv_navigation_block
+settings:
+  id: cgtv_navigation_block
+  label: 'Navigation block'
+  provider: cogecotv_base
+  label_display: '0'
+visibility: {  }

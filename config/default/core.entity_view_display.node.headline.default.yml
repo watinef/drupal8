@@ -1,0 +1,57 @@
+uuid: c7e6bcad-0986-43f8-aa58-d811b85d0d82
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.headline.body
+    - field.field.node.headline.field_community
+    - field.field.node.headline.field_image
+    - field.field.node.headline.field_link
+    - image.style.headline
+    - node.type.headline
+  module:
+    - image
+    - link
+    - text
+    - user
+id: node.headline.default
+targetEntityType: node
+bundle: headline
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: headline
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_community: true
+  langcode: true

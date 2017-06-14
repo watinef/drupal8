@@ -1,0 +1,22 @@
+uuid: 6579d7e3-c5d2-42a7-8d0b-d44ca733e31d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.call_to_action_promotion
+id: node.call_to_action_promotion.sticky
+field_name: sticky
+entity_type: node
+bundle: call_to_action_promotion
+label: 'Epinglé en haut des listes'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

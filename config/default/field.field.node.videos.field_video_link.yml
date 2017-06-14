@@ -1,0 +1,25 @@
+uuid: e39093e2-8b82-44e4-98ea-b88b64985da0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video_link
+    - node.type.videos
+  module:
+    - video_embed_field
+id: node.videos.field_video_link
+field_name: field_video_link
+entity_type: node
+bundle: videos
+label: 'Video Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    vimeo: vimeo
+    youtube: youtube
+    youtube_playlist: youtube_playlist
+field_type: video_embed_field

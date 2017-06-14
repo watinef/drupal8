@@ -1,0 +1,22 @@
+uuid: ebf61ccb-2477-4be7-976f-4f9cf00c4f5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.host
+  module:
+    - text
+id: node.host.body
+field_name: body
+entity_type: node
+bundle: host
+label: Bio
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

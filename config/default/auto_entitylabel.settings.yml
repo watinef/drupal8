@@ -1,0 +1,8 @@
+node_type_shared_content_status: '1'
+node_type_shared_content_pattern: 'Type: [node:field_content:entity:content-type] - [node:field_content:entity:title] shared in [node:field_community]'
+node_type_shared_content_php: 0
+submit: 'Enregistrer la configuration'
+form_build_id: form-v2sSfyByiOvnimeaZs6AfU_4ya2LydwHjOU0mMnV9MY
+form_token: 5BngPGNARLJPvYkOuTPSMddHJtMGivCOZYVFP7HqRkA
+form_id: auto_entitylabel_settings_form
+op: 'Enregistrer la configuration'

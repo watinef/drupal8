@@ -1,0 +1,28 @@
+uuid: 21f81032-60bc-4a01-acb2-7594112f3024
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_season
+    - node.type.videos
+    - taxonomy.vocabulary.season
+id: node.videos.field_season
+field_name: field_season
+entity_type: node
+bundle: videos
+label: Season
+description: 'Season of the video in the tv show'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      season: season
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

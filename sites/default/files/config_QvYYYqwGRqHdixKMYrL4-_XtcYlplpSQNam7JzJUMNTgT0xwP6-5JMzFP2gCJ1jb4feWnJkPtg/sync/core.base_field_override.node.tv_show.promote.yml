@@ -1,0 +1,22 @@
+uuid: f41c0c78-a866-4413-a60d-cec9acd7ccd5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.tv_show
+id: node.tv_show.promote
+field_name: promote
+entity_type: node
+bundle: tv_show
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

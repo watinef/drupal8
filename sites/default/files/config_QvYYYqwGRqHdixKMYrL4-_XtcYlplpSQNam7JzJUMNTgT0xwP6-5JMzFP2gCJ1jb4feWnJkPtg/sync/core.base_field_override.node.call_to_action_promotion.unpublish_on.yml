@@ -1,0 +1,18 @@
+uuid: 1bd6249b-bcae-4307-a946-d8ceeadcda83
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.call_to_action_promotion
+id: node.call_to_action_promotion.unpublish_on
+field_name: unpublish_on
+entity_type: node
+bundle: call_to_action_promotion
+label: 'Unpublish on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

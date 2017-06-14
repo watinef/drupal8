@@ -1,0 +1,22 @@
+uuid: 6f227d10-6627-4d9f-89c5-a6bd09784d47
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.headline
+id: node.headline.status
+field_name: status
+entity_type: node
+bundle: headline
+label: 'Statut de publication'
+description: 'Un booléen indiquant l''état de publication.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

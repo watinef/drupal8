@@ -1,0 +1,24 @@
+uuid: 11535378-07b5-4827-8ab1-6432bd9ab076
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - cogecotv_base
+  theme:
+    - cogecotv
+third_party_settings:
+  block_class:
+    classes: ''
+id: weatherblock
+theme: cogecotv
+region: header_fourth
+weight: 0
+provider: null
+plugin: cgtv_weather_block
+settings:
+  id: cgtv_weather_block
+  label: 'Weather block'
+  provider: cogecotv_base
+  label_display: '0'
+visibility: {  }

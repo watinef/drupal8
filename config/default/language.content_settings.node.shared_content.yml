@@ -1,0 +1,11 @@
+uuid: 23f07f75-9869-4051-8ff8-9150102568ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.shared_content
+id: node.shared_content
+target_entity_type_id: node
+target_bundle: shared_content
+default_langcode: site_default
+language_alterable: false

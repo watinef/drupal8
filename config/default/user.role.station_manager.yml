@@ -1,0 +1,35 @@
+uuid: 28d150b5-345a-4178-8bbd-b79b7b107ff1
+langcode: en
+status: true
+dependencies: {  }
+id: station_manager
+label: 'Station Manager'
+weight: -8
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'administer nodes'
+  - 'create call_to_action_promotion content'
+  - 'create headline content'
+  - 'create host content'
+  - 'create tv_show content'
+  - 'create videos content'
+  - 'edit any call_to_action_promotion content'
+  - 'edit any headline content'
+  - 'edit any host content'
+  - 'edit any tv_show content'
+  - 'edit any videos content'
+  - 'revert call_to_action_promotion revisions'
+  - 'revert headline revisions'
+  - 'revert host revisions'
+  - 'revert tv_show revisions'
+  - 'revert videos revisions'
+  - 'view any unpublished content'
+  - 'view call_to_action_promotion revisions'
+  - 'view content moderation'
+  - 'view headline revisions'
+  - 'view host revisions'
+  - 'view latest version'
+  - 'view tv_show revisions'
+  - 'view videos revisions'

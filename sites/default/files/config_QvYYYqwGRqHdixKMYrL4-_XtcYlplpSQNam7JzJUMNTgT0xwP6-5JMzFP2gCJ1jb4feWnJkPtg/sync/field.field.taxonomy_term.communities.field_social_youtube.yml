@@ -1,0 +1,23 @@
+uuid: c13401b9-ee05-4d73-bd55-a83dc088c8d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_social_youtube
+    - taxonomy.vocabulary.communities
+  module:
+    - link
+id: taxonomy_term.communities.field_social_youtube
+field_name: field_social_youtube
+entity_type: taxonomy_term
+bundle: communities
+label: 'Social Media Youtube'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

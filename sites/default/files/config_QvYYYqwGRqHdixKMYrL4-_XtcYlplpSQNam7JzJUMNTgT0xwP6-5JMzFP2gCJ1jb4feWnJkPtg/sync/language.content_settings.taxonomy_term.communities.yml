@@ -1,0 +1,16 @@
+uuid: ada36ff5-46c2-440e-b21b-92288e8b5182
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.communities
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: taxonomy_term.communities
+target_entity_type_id: taxonomy_term
+target_bundle: communities
+default_langcode: site_default
+language_alterable: false

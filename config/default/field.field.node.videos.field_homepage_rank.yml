@@ -1,0 +1,23 @@
+uuid: 24d8f020-ee11-474d-b2d6-730d4447ec28
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_homepage_rank
+    - node.type.videos
+id: node.videos.field_homepage_rank
+field_name: field_homepage_rank
+entity_type: node
+bundle: videos
+label: 'Homepage rank'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,19 @@
+uuid: 4839a55b-2268-49ad-8b55-01920ef968e1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+    - node.type.tv_show
+id: node.tv_show.field_subtitle
+field_name: field_subtitle
+entity_type: node
+bundle: tv_show
+label: Subtitle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

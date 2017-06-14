@@ -1,0 +1,14 @@
+uuid: 7f77edd5-e2b4-4bbc-9c49-6f402cca8d6f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.local_producer
+  module:
+    - user
+id: user_remove_role_action.local_producer
+label: 'Remove the Local producer role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: local_producer

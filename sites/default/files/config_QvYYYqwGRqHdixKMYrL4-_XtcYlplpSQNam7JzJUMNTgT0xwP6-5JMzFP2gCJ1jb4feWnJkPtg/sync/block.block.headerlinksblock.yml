@@ -1,0 +1,24 @@
+uuid: 85c7f923-83db-4112-984b-2a96660548f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - cogecotv_base
+  theme:
+    - cogecotv
+third_party_settings:
+  block_class:
+    classes: ''
+id: headerlinksblock
+theme: cogecotv
+region: header_third
+weight: -4
+provider: null
+plugin: cgtv_headerlinks_block
+settings:
+  id: cgtv_headerlinks_block
+  label: 'Header Links block'
+  provider: cogecotv_base
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 1682c139-0ea2-4f3a-add1-451b60220e4a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.call_to_action_promotion
+id: node.call_to_action_promotion.promote
+field_name: promote
+entity_type: node
+bundle: call_to_action_promotion
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

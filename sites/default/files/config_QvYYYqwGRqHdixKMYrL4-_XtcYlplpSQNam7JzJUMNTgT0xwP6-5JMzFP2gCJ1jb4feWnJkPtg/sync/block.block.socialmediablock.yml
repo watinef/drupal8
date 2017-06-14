@@ -1,0 +1,24 @@
+uuid: 3bbecc15-9d76-401d-9170-74ec60843a8f
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - cogecotv_base
+  theme:
+    - cogecotv
+third_party_settings:
+  block_class:
+    classes: ''
+id: socialmediablock
+theme: cogecotv
+region: header_third
+weight: -5
+provider: null
+plugin: cogecotv_base_socialmedia_block
+settings:
+  id: cogecotv_base_socialmedia_block
+  label: 'Social Media block'
+  provider: cogecotv_base
+  label_display: '0'
+visibility: {  }

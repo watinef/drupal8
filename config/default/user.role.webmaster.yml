@@ -1,0 +1,47 @@
+uuid: 7fe27034-6c56-4023-80c9-f45d6a9a3c4a
+langcode: en
+status: true
+dependencies: {  }
+id: webmaster
+label: Webmaster
+weight: -9
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'administer account settings'
+  - 'administer nodes'
+  - 'administer users'
+  - 'bypass node access'
+  - 'create call_to_action_promotion content'
+  - 'create headline content'
+  - 'create host content'
+  - 'create tv_show content'
+  - 'create videos content'
+  - 'delete all revisions'
+  - 'delete any call_to_action_promotion content'
+  - 'delete any headline content'
+  - 'delete any host content'
+  - 'delete any tv_show content'
+  - 'delete any videos content'
+  - 'edit any call_to_action_promotion content'
+  - 'edit any headline content'
+  - 'edit any host content'
+  - 'edit any tv_show content'
+  - 'edit any videos content'
+  - 'revert all revisions'
+  - 'revert call_to_action_promotion revisions'
+  - 'revert headline revisions'
+  - 'revert host revisions'
+  - 'revert tv_show revisions'
+  - 'revert videos revisions'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view call_to_action_promotion revisions'
+  - 'view content moderation'
+  - 'view headline revisions'
+  - 'view host revisions'
+  - 'view latest version'
+  - 'view tv_show revisions'
+  - 'view videos revisions'

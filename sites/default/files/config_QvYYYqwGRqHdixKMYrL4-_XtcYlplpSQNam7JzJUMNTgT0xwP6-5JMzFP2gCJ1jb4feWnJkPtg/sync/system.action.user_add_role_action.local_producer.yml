@@ -1,0 +1,14 @@
+uuid: 81c89e08-bad3-4512-97d3-31a3182038fe
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.local_producer
+  module:
+    - user
+id: user_add_role_action.local_producer
+label: 'Add the Local producer role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: local_producer

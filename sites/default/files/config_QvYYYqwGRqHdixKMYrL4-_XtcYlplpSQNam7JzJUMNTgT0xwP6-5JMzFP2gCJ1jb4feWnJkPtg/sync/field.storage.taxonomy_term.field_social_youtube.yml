@@ -1,0 +1,19 @@
+uuid: cc9c72d6-29f7-40b4-8b9e-734b255089d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - taxonomy
+id: taxonomy_term.field_social_youtube
+field_name: field_social_youtube
+entity_type: taxonomy_term
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

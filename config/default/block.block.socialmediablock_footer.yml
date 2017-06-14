@@ -1,0 +1,24 @@
+uuid: 7742f272-9fea-4dc3-817d-39068b6aa9e5
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - cogecotv_base
+  theme:
+    - cogecotv
+third_party_settings:
+  block_class:
+    classes: ''
+id: socialmediablock_footer
+theme: cogecotv
+region: footer
+weight: 0
+provider: null
+plugin: cogecotv_base_socialmedia_block
+settings:
+  id: cogecotv_base_socialmedia_block
+  label: 'Social Media block Footer'
+  provider: cogecotv_base
+  label_display: '0'
+visibility: {  }

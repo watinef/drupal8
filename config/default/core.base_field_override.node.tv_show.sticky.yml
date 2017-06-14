@@ -1,0 +1,22 @@
+uuid: d7a7041e-0e6f-4481-8f05-9c8f3e37ea1c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.tv_show
+id: node.tv_show.sticky
+field_name: sticky
+entity_type: node
+bundle: tv_show
+label: 'Epinglé en haut des listes'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

@@ -1,0 +1,31 @@
+uuid: 21bb3f9d-8dd9-4e05-bd0f-7f46b1d20a5b
+langcode: fr
+status: true
+dependencies: {  }
+id: local_producer
+label: 'Local producer'
+weight: 3
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'administer nodes'
+  - 'create call_to_action_promotion content'
+  - 'create headline content'
+  - 'create host content'
+  - 'create tv_show content'
+  - 'edit any tv_show content'
+  - 'edit any videos content'
+  - 'revert call_to_action_promotion revisions'
+  - 'revert headline revisions'
+  - 'revert host revisions'
+  - 'revert tv_show revisions'
+  - 'revert videos revisions'
+  - 'view any unpublished content'
+  - 'view call_to_action_promotion revisions'
+  - 'view content moderation'
+  - 'view headline revisions'
+  - 'view host revisions'
+  - 'view latest version'
+  - 'view tv_show revisions'
+  - 'view videos revisions'

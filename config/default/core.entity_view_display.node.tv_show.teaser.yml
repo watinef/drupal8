@@ -1,0 +1,33 @@
+uuid: 96d80203-54e3-4df7-acee-1b25703e4db0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tv_show.body
+    - node.type.tv_show
+  module:
+    - text
+    - user
+id: node.tv_show.teaser
+targetEntityType: node
+bundle: tv_show
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_communities: true
+  field_image: true
+  field_subtitle: true
+  field_visible_on_menu_page: true
+  langcode: true

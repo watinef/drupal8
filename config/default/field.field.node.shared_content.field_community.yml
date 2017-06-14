@@ -1,0 +1,28 @@
+uuid: 163443b3-1d89-4055-9291-e7a55d61fc1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_community
+    - node.type.shared_content
+    - taxonomy.vocabulary.communities
+id: node.shared_content.field_community
+field_name: field_community
+entity_type: node
+bundle: shared_content
+label: Community
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      communities: communities
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

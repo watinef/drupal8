@@ -1,0 +1,20 @@
+uuid: 853f1ec7-9ffc-404d-866f-9a6105d04073
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.tv_show
+  module:
+    - path
+id: node.tv_show.path
+field_name: path
+entity_type: node
+bundle: tv_show
+label: 'Alias d''URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

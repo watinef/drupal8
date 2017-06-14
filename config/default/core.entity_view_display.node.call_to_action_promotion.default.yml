@@ -1,0 +1,52 @@
+uuid: 8faecb67-030f-40e1-80d2-145026c3a903
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.call_to_action_promotion.body
+    - field.field.node.call_to_action_promotion.field_community
+    - field.field.node.call_to_action_promotion.field_image
+    - field.field.node.call_to_action_promotion.field_link
+    - node.type.call_to_action_promotion
+  module:
+    - image
+    - link
+    - text
+    - user
+id: node.call_to_action_promotion.default
+targetEntityType: node
+bundle: call_to_action_promotion
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  field_community: true
+  langcode: true
+  links: true

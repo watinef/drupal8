@@ -1,0 +1,28 @@
+uuid: 37387cb8-04c9-4922-a17a-64488bd9e5a5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_communities
+    - node.type.tv_show
+    - taxonomy.vocabulary.communities
+id: node.tv_show.field_communities
+field_name: field_communities
+entity_type: node
+bundle: tv_show
+label: Communities
+description: 'Communities for which the TV show is available'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      communities: communities
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
